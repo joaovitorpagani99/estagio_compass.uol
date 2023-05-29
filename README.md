@@ -1,23 +1,27 @@
-# Quem sou eu ?
+# Apresentação
 
-Eu me chamo **João Vitor Pagani** nasci em Cristalina/GO, formei no ensino médio com 17 anos, eu fiz ele junto com o curso Técno em Informatica, fiz no IF goiano de Cristalina.
+- Nome: João Vitor Pagani
+- Cidade: Cristalina, Goiás
+- Instituição de ensino: Instituto Federal de Urutaí
+- Curso: Sistemas de Informações
+- Semestre atual: 7º semestre (quase concluindo)
 
-Atualmente estou fazendo curso de Sistemas de informações no Instituto federal campus de Urutai, tô no 7° semestre, quase terminando.
+## Experiência em Tecnologia
 
-De experiencia nas linguagens: 
-.Java
-.Spring Boot
-.SQL
-.Git/GitHub
-.Html e CSS
+- Linguagens: Java, Spring Boot
+- Banco de Dados: SQL
+- Controle de Versão: Git/GitHub
+- Front-end: HTML, CSS
 
-### _hobbies_
-* Academia
-* ler
-* Jogar bola
-* ouvir música
-* Aprender algo novo (isso é o que eu mais gosto de fazer)
+## Hobbies
 
+- Academia: Gosto de me exercitar para manter um estilo de vida saudável.
+- Leitura: Gosto de lê, faz com que minha mente se expanda.
+- Jogar bola: Gosto muito de jogar, principalmente com meus amigos.
+- Ouvir música: Concerteza ouvir música é o que eu mais faço, gosto muito.
+- Aprender algo novo: Tenho paixão por aprender e estou sempre buscando novas oportunidades para me desenvolver.
+
+Meu Linkedin:  [LinkedIn](https://www.linkedin.com/in/joaovitorpagani99) 
 
 # Resumo de Aprendizados
 
