@@ -1,0 +1,51 @@
+Lista de atores ordenada pelo faturamento bruto total (em ordem decrescente):
+Ator: Harrison FordFaturamento bruto total: 4871.7
+Ator: Samuel L. JacksonFaturamento bruto total: 4772.8
+Ator: Morgan FreemanFaturamento bruto total: 4468.3
+Ator: Tom HanksFaturamento bruto total: 4340.8
+Ator: "Robert Downey Jr."Faturamento bruto total: 3947.3
+Ator: Eddie MurphyFaturamento bruto total: 3810.4
+Ator: Tom CruiseFaturamento bruto total: 3587.2
+Ator: Johnny DeppFaturamento bruto total: 3368.6
+Ator: Michael CaineFaturamento bruto total: 3351.5
+Ator: Scarlett JohanssonFaturamento bruto total: 3341.2
+Ator: Gary OldmanFaturamento bruto total: 3294.0
+Ator: Robin WilliamsFaturamento bruto total: 3279.3
+Ator: Bruce WillisFaturamento bruto total: 3189.4
+Ator: Stellan SkarsgardFaturamento bruto total: 3175.0
+Ator: Anthony DanielsFaturamento bruto total: 3162.9
+Ator: Ian McKellenFaturamento bruto total: 3150.4
+Ator: Will SmithFaturamento bruto total: 3149.1
+Ator: Stanley TucciFaturamento bruto total: 3123.9
+Ator: Matt DamonFaturamento bruto total: 3107.3
+Ator: Robert DeNiroFaturamento bruto total: 3081.3
+Ator: Cameron DiazFaturamento bruto total: 3031.7
+Ator: Liam NeesonFaturamento bruto total: 2942.7
+Ator: Andy SerkisFaturamento bruto total: 2890.6
+Ator: Don CheadleFaturamento bruto total: 2885.4
+Ator: Ben StillerFaturamento bruto total: 2827.0
+Ator: Helena Bonham CarterFaturamento bruto total: 2822.0
+Ator: Orlando BloomFaturamento bruto total: 2815.8
+Ator: Woody HarrelsonFaturamento bruto total: 2815.8
+Ator: Cate BlanchettFaturamento bruto total: 2802.6
+Ator: Julia RobertsFaturamento bruto total: 2735.3
+Ator: Elizabeth BanksFaturamento bruto total: 2726.3
+Ator: Ralph FiennesFaturamento bruto total: 2715.3
+Ator: Emma WatsonFaturamento bruto total: 2681.9
+Ator: Tommy Lee JonesFaturamento bruto total: 2681.3
+Ator: Brad PittFaturamento bruto total: 2680.9
+Ator: Adam SandlerFaturamento bruto total: 2661.0
+Ator: Daniel RadcliffeFaturamento bruto total: 2634.4
+Ator: Jonah HillFaturamento bruto total: 2605.1
+Ator: Owen WilsonFaturamento bruto total: 2602.3
+Ator: Idris ElbaFaturamento bruto total: 2580.6
+Ator: Bradley CooperFaturamento bruto total: 2557.7
+Ator: Mark WahlbergFaturamento bruto total: 2549.8
+Ator: Jim CarreyFaturamento bruto total: 2545.2
+Ator: Dustin HoffmanFaturamento bruto total: 2522.1
+Ator: Leonardo DiCaprioFaturamento bruto total: 2518.3
+Ator: Jeremy RennerFaturamento bruto total: 2500.3
+Ator: Philip Seymour HoffmanFaturamento bruto total: 2463.7
+Ator: Sandra BullockFaturamento bruto total: 2462.6
+Ator: Chris EvansFaturamento bruto total: 2457.8
+Ator: Anne HathawayFaturamento bruto total: 2416.5
