@@ -1,5 +1,3 @@
-# Instruções
-
 ## Certificado AWS Cloud Quest: Cloud Practitioner
 - Introdução aos serviços básicos da AWS e conceitos fundamentais da computação em nuvem.
 - Arquitetura da AWS, serviços de computação, armazenamento, banco de dados, rede e segurança.
@@ -23,7 +21,11 @@
 
 # Certificados
 
-![Certificado AWS Cloud Quest: Cloud Practitioner](https://www.credly.com/badges/55c21182-e8aa-4ad3-b1f6-49c285e3f2ac/public_url)
-![Certificado AWS Partner: Cloud Economics Accreditation](https://www.credly.com/badges/cc6fab92-0881-49cc-a5f5-9a4d07881f0c/public_url)
-![Certificado AWS Partner: Accreditation (Technical)](https://www.credly.com/badges/05126481-3cbc-4ba6-b0de-73a0fc32d590/public_url)
-![Certificado AWS Partner: Sales Accreditation (Business)](https://www.credly.com/badges/a6b84e4f-f713-4388-858a-e865b0fc21df/public_url)
+[![Certificado AWS Cloud Quest: Cloud Practitioner](https://www.credly.com/badges/55c21182-e8aa-4ad3-b1f6-49c285e3f2ac/public_url)](https://www.credly.com/badges/55c21182-e8aa-4ad3-b1f6-49c285e3f2ac/public_url)
+
+[![Certificado AWS Partner: Cloud Economics Accreditation](https://www.credly.com/badges/cc6fab92-0881-49cc-a5f5-9a4d07881f0c/public_url)](https://www.credly.com/badges/cc6fab92-0881-49cc-a5f5-9a4d07881f0c/public_url)
+
+[![Certificado AWS Partner: Accreditation (Technical)](https://www.credly.com/badges/05126481-3cbc-4ba6-b0de-73a0fc32d590/public_url)](https://www.credly.com/badges/05126481-3cbc-4ba6-b0de-73a0fc32d590/public_url)
+
+[![Certificado AWS Partner: Sales Accreditation (Business)](https://www.credly.com/badges/a6b84e4f-f713-4388-858a-e865b0fc21df/public_url)](https://www.credly.com/badges/a6b84e4f-f713-4388-858a-e865b0fc21df/public_url)
+
