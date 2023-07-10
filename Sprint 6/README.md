@@ -16,7 +16,7 @@
 
 ## Certificados 
 
-- ![AWS Skill Builder - Data Analytics Fundamentals (Portuguese)](certificados/DataAnalyticsFundamentals.png)
+- [AWS Skill Builder - Data Analytics Fundamentals (Portuguese)](certificados/DataAnalyticsFundamentals.png)
 
 - ![AWS Partner: Data Analytics on AWS (Business) (Portuguese)](certificados/AWSPartnerDataAnalyticsonAWS.png)
 
