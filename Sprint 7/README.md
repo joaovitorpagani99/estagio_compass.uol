@@ -14,9 +14,9 @@
 
 # Evidências
 
-![Evidencia 1 - ApacheSpark-ContadordePalavras](evidencias/docker.png)
+![Evidencia 1 - ApacheSpark-ContadordePalavras](evidencias/ApacheSpark-ContadordePalavras/docker.png)
 
-![Evidencia 2 - LAB GLUE](evidencias/LabGlue)
+![Evidencia 2 - LAB GLUE](evidencias/labGlue/)
 
 # Certificados
 
