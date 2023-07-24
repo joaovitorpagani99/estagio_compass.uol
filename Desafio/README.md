@@ -1,5 +1,5 @@
 # Etapas
 
 1. ...
-[Etapa I](etapa-1)
+[Etapa I](Etapa1)
 
