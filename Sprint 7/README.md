@@ -4,10 +4,10 @@
 [Codigos do faca voce mesmo do laboratorio AWS Glue.](exercicios/Laboratorio AWSGlue)
 
 2. ...
-[Resposta Ex1.](exercicios/exerc1.py)
-[Resposta Ex2.](exercicios/exerc3.py)
-[Resposta Ex3.](exercicios/exerc3.py)
-[Resposta Ex4.](exercicios/exerc4.py)
+[Resposta Ex1.](tarefa 1/exerc1.py)
+[Resposta Ex2.](tarefa 1/exerc3.py)
+[Resposta Ex3.](tarefa 1/exerc3.py)
+[Resposta Ex4.](tarefa 1/exerc4.py)
 
 3. ...
 [Resposta Ex1.](exercicios/comandosUtilizandos.py)
