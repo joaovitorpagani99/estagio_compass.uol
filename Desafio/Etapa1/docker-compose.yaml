@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  desafio: 
+    image: amazon
+    environment:
+      AWS_ACCESS_KEY_ID: AKIA2BE5YIBVCZBWVG4T
+      AWS_SECRET_ACCESS_KEY: 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
+      AWS_DEFAULT_REGION: us-east-1
+      AWS_DEFAULT_OUTPUT: json
