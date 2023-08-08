@@ -21,7 +21,7 @@
 - Ouvir música: Concerteza ouvir música é o que eu mais faço, gosto muito.
 - Aprender algo novo: Tenho paixão por aprender e estou sempre buscando novas oportunidades para me desenvolver.
 
-Meu Linkedin:  [LinkedIn](https://www.linkedin.com/in/joaovitorpagani99) 
+Meu Linkedin:  [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-v%C3%ADtor-pagani-998536195) 
 
 ## Sprints 
 
