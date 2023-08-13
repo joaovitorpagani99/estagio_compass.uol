@@ -4,7 +4,6 @@ from awsglue.utils import getResolvedOptions
 from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 from awsglue.job import Job
-from pyspark.sql.functions import col, upper
 
 ## @params: [JOB_NAME]
 args = getResolvedOptions(sys.argv, ['JOB_NAME','S3_INPUT_PATH','S3_TARGET_PATH'])
@@ -23,17 +22,14 @@ df = glueContext.create_dynamic_frame.from_options(
         "paths": [source_file]
     },
     "csv",
-    {"withHeader": True, "separator": ","}
+    {"withHeader": True, "separator": "|"}
 )
-
-df = df.toDF()
-df = df.withColumn("nome", upper(col("nome")))
-
 
 glueContext.write_dynamic_frame.from_options(
     frame=df,
     connection_type="s3",
-    connection_options={"path": target_path,"partitionKeys":["sexo","ano"]},
-    format="Json"
+    connection_options={"path": target_path},
+    format="parquet"
 )
-job.commit()
+    
+job.commit() 
