@@ -43,4 +43,4 @@ SELECT
     dataEntrega, 
     horaEntrega, 
     idVendedor
-FROM tabela_original;
+FROM tb_locacao;

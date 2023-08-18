@@ -1,47 +1,38 @@
-create table  dim_Carro(
-	idCarro int primary key,
-    kmCarro int,
-    classiCarro varchar(100),
-    marcaCarro varchar(100),
-	modeloCarro varchar(100),
-    anoCarro int
-);
+-- Create a view for Car information
+CREATE VIEW vw_car_info AS
+SELECT idCarro, kmCarro, classiCarro, marcaCarro, modeloCarro, anoCarro, idCombustivel
+FROM Carro;
 
-create table dim_vendedor(
-	idVendedor int primary key,
-    nomeVendedor varchar(100),
-    estado varchar(100),
-	sexoVendedor varchar(100)
-);
+-- Create a view for Vendor information
+CREATE VIEW vw_vendor_info AS
+SELECT idVendedor, nomeVendedor, estadoVendedor, sexoVendedor
+FROM Vendedor;
 
-create table dim_combustivel(
-	idCombustivel int primary key,
-    tipoCombustivel varchar(100)
-);
+CREATE VIEW vw_fuel_info AS
+SELECT idCombustivel, tipoCombustivel
+FROM Combustivel;
 
-create table dim_cliente(
-	idCliente int primary key,
-    nomeCliente varchar(100),
-    cidade varchar(100),
-    estado varchar(100),
-    pais varchar(100)
-);
+-- Create a view for Customer information
+CREATE VIEW vw_customer_info AS
+SELECT idCliente, nomeCliente, cidadeCliente, estadoCliente, paisCliente
+FROM Cliente;
 
-create table fato_locacao(
-	idLocacao int primary key,
-    idCliente int,
-    idCarro int,
-    idVendedor int,
-    idCombustivel int,
-    dataLocacao date,
-    horaLocacao time,
-    qtdDiaria int,
-    vlrDiaria int,
-    dataEntrega date,
-    horaEntrega time,
-    foreign key(idCliente) references dim_cliente(idCliente),
-    foreign key(idCarro) references dim_carro(idCarro),
-    foreign key(idVendedor) references dim_vendedor(idVendedor),
-    foreign key(idCombustivel) references dim_combustivel(idCombustivel)
-);
-
+-- Create a view for Rental information
+CREATE VIEW vw_rental_info AS
+SELECT
+    L.idLocacao,
+    C.*,
+    CAR.*,
+    V.*,
+    F.tipoCombustivel,
+    L.dataLocacao,
+    L.horaLocacao,
+    L.qtdDiaria,
+    L.vlrDiaria,
+    L.dataEntrega,
+    L.horaEntrega
+FROM Locacao L
+JOIN Cliente C ON L.idCliente = C.idCliente
+JOIN Carro CAR ON L.idCarro = CAR.idCarro
+JOIN Vendedor V ON L.idVendedor = V.idVendedor
+JOIN Combustivel F ON CAR.idCombustivel = F.idCombustivel;

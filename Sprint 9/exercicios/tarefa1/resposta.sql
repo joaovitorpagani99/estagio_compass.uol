@@ -1,46 +1,49 @@
-CREATE TABLE Cliente (
-    idCliente INT PRIMARY KEY,
-    nomeCliente VARCHAR(100),
-    cidadeCliente VARCHAR(100),
-    estadoCliente VARCHAR(100),
-    paisCliente VARCHAR(100)
-);
+CREATE VIEW dim_cliente AS
+SELECT
+    idCliente,
+    nomeCliente AS NomeCliente,
+    cidadeCliente AS CidadeCliente,
+    estadoCliente AS EstadoCliente,
+    paisCliente AS PaisCliente
+FROM Cliente;
 
-CREATE TABLE Carro (
-    idCarro INT PRIMARY KEY,
-    kmCarro INT,
-    classiCarro VARCHAR(100),
-    marcaCarro VARCHAR(100),
-    modeloCarro VARCHAR(100),
-    anoCarro INT,
-    idCombustivel INT,
-    FOREIGN KEY (idCombustivel) REFERENCES Combustivel(idCombustivel)
-);
+CREATE VIEW dim_carro AS
+SELECT
+    idCarro,
+    kmCarro,
+    classiCarro AS ClassificacaoCarro,
+    marcaCarro AS MarcaCarro,
+    modeloCarro AS ModeloCarro,
+    anoCarro AS AnoCarro
+FROM Carro;
 
-CREATE TABLE Combustivel (
-    idCombustivel INT PRIMARY KEY,
-    tipoCombustivel VARCHAR(100)
-);
+CREATE VIEW dim_combustivel AS
+SELECT
+    idCombustivel,
+    tipoCombustivel
+FROM Combustivel;
 
-CREATE TABLE Vendedor (
-    idVendedor INT PRIMARY KEY,
-    nomeVendedor VARCHAR(100),
-    estadoVendedor VARCHAR(100),
-    sexoVendedor INT
-);
+CREATE VIEW dim_vendedor AS
+SELECT
+    idVendedor AS idVendedor,
+    nomeVendedor AS NomeVendedor,
+    estadoVendedor AS EstadoVendedor,
+    sexoVendedor AS SexoVendedor
+FROM Vendedor;
 
-CREATE TABLE Locacao (
-    idLocacao INT PRIMARY KEY,
-    idCliente INT,
-    idCarro INT,
-    dataLocacao DATE,
-    horaLocacao TIME,
-    qtdDiaria INT,
-    vlrDiaria INT,
-    dataEntrega DATE,
-    horaEntrega TIME,
-    idVendedor INT,
-    FOREIGN KEY (idCliente) REFERENCES Cliente(idCliente),
-    FOREIGN KEY (idCarro) REFERENCES Carro(idCarro),
-    FOREIGN KEY (idVendedor) REFERENCES Vendedor(idVendedor)
-);
+CREATE VIEW fator_locacao AS
+SELECT
+    idLocacao,
+    c.idCliente AS idCliente,
+    ca.idCarro AS idCarro,
+    dataLocacao AS DataLocacao,
+    horaLocacao AS HoraLocacao,
+    qtdDiaria AS QuantidadeDiaria,
+    vlrDiaria AS ValorDiaria,
+    dataEntrega AS DataEntrega,
+    horaEntrega AS HoraEntrega,
+    v.idVendedor AS idVendedor
+FROM Locacao l
+JOIN dim_cliente c ON l.idCliente = c.idCliente
+JOIN dim_carro ca ON l.idCarro = ca.idCarro
+JOIN dim_vendedor v ON l.idVendedor = v.idVendedor;
