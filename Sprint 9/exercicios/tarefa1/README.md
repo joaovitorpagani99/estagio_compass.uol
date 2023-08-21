@@ -1,24 +1,24 @@
 # Normalização de Tabela - Concessionária
 
-Neste projeto, realizaremos a normalização de uma tabela de uma concessionária de veículos. O objetivo é aplicar as formas normais para eliminar redundâncias e garantir que a estrutura do banco de dados seja eficiente e bem organizada.
+Nesta atividade, realizei a normalização de uma tabela de uma concessionária de veículos. O objetivo é aplicar as formas normais para eliminar redundâncias e garantir que a estrutura do banco de dados seja eficiente e bem organizada.
 
 ## Tabela Original
 
 A tabela original possui os seguintes atributos:
 
 - idLocacao (chave primária)
-- idCliente (chave estrangeira referenciando a entidade "Cliente")
+- idCliente 
 - nomeCliente
 - cidadeCliente
 - estadoCliente
 - paisCliente
-- idCarro (chave estrangeira referenciando a entidade "Carro")
+- idCarro 
 - kmCarro
 - classiCarro
 - marcaCarro
 - modeloCarro
 - anoCarro
-- idCombustivel (chave estrangeira referenciando a entidade "Combustível")
+- idCombustivel 
 - tipoCombustivel
 - dataLocacao
 - horaLocacao
@@ -26,7 +26,7 @@ A tabela original possui os seguintes atributos:
 - vlrDiaria
 - dataEntrega
 - horaEntrega
-- idVendedor (chave estrangeira referenciando a entidade "Vendedor")
+- idVendedor 
 - nomeVendedor
 - estadoVendedor
 - sexoVendedor
@@ -90,6 +90,6 @@ Entidades resultantes:
 
 Com a normalização, a tabela foi dividida em entidades independentes, eliminando dependências transitivas e evitando redundâncias. Essa estrutura resultante representa uma organização mais eficiente e coerente para o banco de dados da concessionária.
 
-Esse projeto foi realizado com base na tabela fornecida e seus atributos...
+Esse modelo foi realizado com base na tabela fornecida e seus atributos...
 
-![Modelo Lógico](db.jpg)
+![Modelo Lógico](modeloLogico.jpg)

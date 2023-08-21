@@ -1,27 +1,35 @@
 # Modelagem Dimensional das Tabelas
 
-A modelagem dimensional é uma abordagem que visa otimizar a estrutura dos dados para suportar consultas analíticas eficientes. Nesse contexto, foram criadas tabelas dimensionais e uma tabela fato a partir dos dados originais fornecidos. Aqui está um resumo do que foi feito:
+Nesta tarefa 2, realizei a modelagem dimensional de um conjunto de tabelas para otimizar a estrutura de dados visando análises eficientes. Abaixo estão os detalhes das tabelas criadas:
 
-## Tabela Fato "FatoLocacao":
-- Uma tabela que contém informações sobre as locações de veículos.
-- Chaves estrangeiras foram adicionadas para se relacionar com as tabelas dimensionais.
+## Tabela Fato "Fato_Locacao":
+- Uma tabela que registra informações de locações de veículos.
+- Chaves estrangeiras foram adicionadas para se relacionar com as dimensões criadas.
 
-## Tabela DimCliente:
-- Uma tabela que contém informações sobre os clientes.
-- As colunas de identificação, nome, cidade, estado e país foram incluídas.
+## Tabela Dim_Cliente:
+- Uma view foi criada (Dim_Cliente) para armazenar informações dos clientes.
+- Incluídas colunas como idCliente, nomeCliente, cidadeCliente, estadoCliente e paisCliente.
 
-## Tabela DimCarro:
-- Uma tabela que contém informações sobre os carros disponíveis.
-- As colunas de identificação, quilometragem, classificação, marca, modelo e ano foram incluídas.
+## Tabela Dim_Carro:
+- Uma view foi criada (Dim_Carro) para conter informações sobre os carros disponíveis.
+- Adicionadas colunas como idCarro, kmCarro, classiCarro, marcaCarro, modeloCarro e anoCarro.
 
-## Tabela DimVendedor:
-- Uma tabela que contém informações sobre os vendedores.
-- As colunas de identificação, nome, estado e sexo foram incluídas.
+## Tabela Dim_Vendedor:
+- Criada uma view (Dim_Vendedor) para armazenar dados dos vendedores.
+- Incluídas colunas como idVendedor, nomeVendedor, sexoVendedor e estadoVendedor.
 
-## Tabela DimCombustivel:
-- Uma tabela que contém informações sobre os tipos de combustível.
-- As colunas de identificação e tipo de combustível foram incluídas.
+## Tabela Dim_Data:
+- Foi elaborada uma view (Dim_Data) para representar informações temporais.
+- Incluídas colunas como data, dia, mes, ano, trimestre e semestre, derivadas da data de locação.
 
-Aqui está o diagrama da modelagem criada:
+## Tabela Dim_Combustivel:
+- Uma view foi criada (Dim_Combustivel) para registrar tipos de combustível.
+- Incluídas colunas como idCombustivel e tipoCombustivel.
 
-![Modelagem Dimensional](db_dimensional_page-0001.jpg)
+## Diagrama de Modelagem
+Aqui está o diagrama representando a modelagem criada:
+![Modelagem Dimensional](modeloLogico.jpg)
+
+Essa abordagem proporciona consultas analíticas mais eficazes, já que as informações relevantes foram denormalizadas nas dimensões e as métricas estão armazenadas na tabela fato. As views criadas unem os dados apropriados para formar a estrutura desejada, otimizando o acesso aos dados para análises mais aprofundadas.
+
+

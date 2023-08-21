@@ -37,13 +37,15 @@ for id_imdb, grupo in df_agrupados:
     if detalhes_filme:
         filmes.append(detalhes_filme)
 
+
 limite_tamanho_json = 10 * 1024 * 1024
 partes_json = []
 parte_atual = []
 tamanho_atual = 0
 
 for detalhes_filme in filmes:
-    filme_json = json.dumps(detalhes_filme)
+    df_result = pd.DataFrame(detalhes_filme)
+    filme_json = json.dumps(df_result)
     tamanho_json_filme = sys.getsizeof(filme_json)
     if tamanho_atual + tamanho_json_filme <= limite_tamanho_json:
         parte_atual.append(detalhes_filme)

@@ -28,11 +28,11 @@ Meu Linkedin:  [LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-v%C3%ADtor-pagan
 1. [Sprint 1](Sprint%201/)
 2. [Sprint 2](Sprint%202/)
 3. [Sprint 3](Sprint%203/)
-4. [Sprint 4](Sprint%204/)
-4. [Sprint 5](Sprint%205/README.md)
-4. [Sprint 6](Sprint%206/README.md)
-4. [Sprint 7](Sprint%207/README.md)
-
+5. [Sprint 4](Sprint%204/)
+6. [Sprint 5](Sprint%205/README.md)
+7. [Sprint 6](Sprint%206/README.md)
+8. [Sprint 7](Sprint%207/README.md)
+9. [Sprint 8](Sprint%208/README.md)
 ## Desafio
 
 1. [Desafio Final](Desafio/README.md)
