@@ -4,6 +4,9 @@ from awsglue.utils import getResolvedOptions
 from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 from awsglue.job import Job
+from pyspark.sql.functions import lit, to_date
+from awsglue.dynamicframe import DynamicFrame
+from pyspark.sql.functions import col
   
 sc = SparkContext.getOrCreate()
 glueContext = GlueContext(sc)
@@ -22,6 +25,8 @@ df = data.toDF()
 df_filtrado= df.filter(df["budget"] != 0)
 df_comData = df_filtrado.withColumn("data_de_criacao", to_date(lit("2023-08-07"), "yyyy-MM-dd"))
 df = df_comData.select("imdb_id","title","release_date", "budget","popularity","revenue","vote_average","vote_count", "data_de_criacao")
+df = df.withColumn("release_date", to_date(col("release_date"), "yyyy-MM-dd"))
+
 dynamic_frame = DynamicFrame.fromDF(df, glueContext)
 
 glueContext.write_dynamic_frame.from_options(

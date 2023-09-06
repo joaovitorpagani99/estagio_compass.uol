@@ -66,3 +66,56 @@ Para unificar as diversas fontes de dados, utilizei o serviço AWS Glue. Esse se
 Após a modelagem dos dados usando o Glue, os dados estavam prontos para serem utilizados no QuickSight. Esse serviço de visualização e análise de dados permitiu explorar os dados modelados e criar insights a partir do modelo multidimensional criado.
 
 Esse fluxo de trabalho permitiu a transformação, modelagem e preparação de dados para análise multidimensional, possibilitando a utilização eficiente dos dados nas análises conduzidas no QuickSight.
+
+## Etapa 4
+
+# Criação do Dashboard de Análise de Gênero de Artistas no QuickSight
+
+## Objetivo
+O objetivo deste projeto foi criar um dashboard no QuickSight para analisar informações relacionadas a filmes e gênero de artistas. O dashboard foi projetado para responder às seguintes perguntas:
+
+1. Quais são os filmes mais populares?
+2. Quais são os filmes com as maiores bilheteiras?
+3. Quais gêneros de artistas (masculinos e femininos) têm as maiores médias de avaliação?
+4. Qual é a distribuição de bilheteria para filmes feitos por gênero de artista (masculino e feminino)?
+5. Existe uma correlação entre o gênero do artista e a avaliação do IMDb?
+6. Qual é a relação entre o orçamento médio e o gênero do artista?
+
+## Etapas de Criação
+
+### 1. Coleta de Dados
+Os dados necessários para esta análise foram coletados de fontes confiáveis e preparados para serem usados no QuickSight. Os conjuntos de dados incluíam informações sobre filmes, gênero de artistas, bilheteria, avaliações do IMDb e orçamento, entre outros.
+
+### 2. Importação dos Dados no QuickSight
+Os dados foram importados no QuickSight para criar um conjunto de dados que serviria como base para o dashboard.
+
+### 3. Criação de Análises
+Foram criadas análises específicas para cada uma das perguntas. Abaixo, descrevo as análises realizadas para cada pergunta:
+
+#### a. Quais são os filmes mais populares?
+Foi criada uma visualização que apresenta uma lista dos filmes mais populares com base em uma métrica específica, como o número de visualizações ou classificações.
+
+#### b. Quais são os filmes com as maiores bilheteiras?
+Uma visualização de gráfico de barras foi criada para mostrar os filmes com as maiores bilheteiras em ordem decrescente.
+
+#### c. Quais gêneros de artistas (masculinos e femininos) têm as maiores médias de avaliação?
+Gráficos de barras ou gráficos de pizza foram utilizados para mostrar as médias de avaliação para diferentes gêneros de artistas (masculino e feminino).
+
+#### d. Qual é a distribuição de bilheteria para filmes feitos por gênero de artista (masculino e feminino)?
+Um gráfico de pizza ou gráfico de setores foi criado para visualizar a distribuição de bilheteria por gênero de artista.
+
+#### e. Existe uma correlação entre o gênero do artista e a avaliação do IMDb?
+Uma análise de correlação foi realizada para determinar se existe uma relação significativa entre o gênero do artista e as avaliações do IMDb.
+
+#### f. Qual é a relação entre o orçamento médio e o gênero do artista?
+Um gráfico de barras empilhadas foi usado para mostrar a relação entre o orçamento médio e o gênero do artista.
+
+### 4. Criação do Dashboard
+Todas as análises foram combinadas em um único dashboard no QuickSight. O layout foi projetado para tornar a navegação e a obtenção de insights o mais fácil possível para o usuário final.
+
+## Conclusão
+Este dashboard no QuickSight foi criado com sucesso para analisar informações relacionadas a filmes e gênero de artistas, respondendo às perguntas específicas fornecidas. Ele fornece uma visão abrangente das tendências e padrões relacionados a filmes e artistas de diferentes gêneros.
+
+## Resultado funal
+
+![Dashboard](./Final/dash_page-0001.jpg)

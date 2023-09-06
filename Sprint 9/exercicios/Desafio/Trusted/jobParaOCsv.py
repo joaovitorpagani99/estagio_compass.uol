@@ -13,23 +13,28 @@ spark = glueContext.spark_session
 job = Job(glueContext)	
 
 job.init(args['JOB_NAME'], args)
-source_file = args['S3_INPUT_PATH']
-target_path = args['S3_TARGET_PATH']
+source_file = "s3://data-lake-paganipb/Raw/Local/CSV/Movies/2023/7/22/movies.csv"
+target_path = "s3://data-lake-paganipb/Trusted/movies/2023/08/12"
 
-df = glueContext.create_dynamic_frame.from_options(
-    "s3",
-    {
-        "paths": [source_file]
-    },
-    "csv",
-    {"withHeader": True, "separator": "|"}
-)
+
+df = df.withColumn("anoLancamento", df["anoLancamento"].cast("int"))
+df = df.withColumn("anoFalecimento", df["anoFalecimento"].cast("int"))
+df = df.withColumn("anoNascimento", df["anoNascimento"].cast("int"))
+df = df.withColumn("tempoMinutos", df["tempoMinutos"].cast("int"))
+df = df.withColumn("notaMedia", df["notaMedia"].cast("double"))
+df = df.withColumn("numeroVotos", df["numeroVotos"].cast("int"))
+df = df.withColumn("genero", when(col("genero") == "\\N", None).otherwise(col("genero")))
+
+df_final_sem_duplicatas = df.dropDuplicates(["id"])
+
+df_final_sem_duplicatas.select("tituloPincipal","anoLancamento","genero","notaMedia","numeroVotos","generoArtista","anoNascimento").show(50)
+
+dynamic_frame = DynamicFrame.fromDF(df_final_sem_duplicatas, glueContext)
+
 
 glueContext.write_dynamic_frame.from_options(
-    frame=df,
+    frame=dynamic_frame,
     connection_type="s3",
     connection_options={"path": target_path},
     format="parquet"
 )
-    
-job.commit() 

@@ -42,7 +42,8 @@ SELECT
     c.idCliente,    
     ca.idCarro, 
     v.idVendedor, 
-    d.data, l.qtdDiaria, 
+    d.data, 
+    l.qtdDiaria, 
     l.vlrDiaria, 
     l.dataEntrega, 
     l.horaEntrega

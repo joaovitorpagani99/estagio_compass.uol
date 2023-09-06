@@ -10,37 +10,34 @@ glueContext = GlueContext(sc)
 spark = glueContext.spark_session
 job = Job(glueContext)
 
-dyf = glueContext.create_dynamic_frame.from_catalog(database='database_name', table_name='table_name')
-dyf.printSchema()
 
-df = dyf.toDF()
-df.show()
+omdb = glueContext.create_dynamic_frame.from_catalog('databaseomdb', '13')
+df = omdb.toDF()
 
-s3_path = "s3://data-lake-paganipb/Raw/Omdb/JSON/2023/08/13/bf-uet-dsa.json"
-s3_path2 = "s3://data-lake-paganipb/Raw/Omdb/JSON/2023/08/13/cvf-uet-lkj.json"
-s3_path3 = "s3://data-lake-paganipb/Raw/Omdb/JSON/2023/08/13/hjk-fgh-rty.json"
-s3_path4 = "s3://data-lake-paganipb/Raw/Omdb/JSON/2023/08/13/idf-uet-tyu.json"
-s3_path5 = "s3://data-lake-paganipb/Raw/Omdb/JSON/2023/08/13/prt-uty-nfd.json"
-s3_path6 = "s3://data-lake-paganipb/Raw/Omdb/JSON/2023/08/13/qwe-uet-nmb.json"
-data= glueContext.create_dynamic_frame.from_options(connection_type= 's3',connection_options={"paths": [s3_path]}, format = 'json')
-data2= glueContext.create_dynamic_frame.from_options(connection_type= 's3',connection_options={"paths": [s3_path2]}, format = 'json')
-data3= glueContext.create_dynamic_frame.from_options(connection_type= 's3',connection_options={"paths": [s3_path3]}, format = 'json')
-data4= glueContext.create_dynamic_frame.from_options(connection_type= 's3',connection_options={"paths": [s3_path4]}, format = 'json')
-data5= glueContext.create_dynamic_frame.from_options(connection_type= 's3',connection_options={"paths": [s3_path5]}, format = 'json')
-data6= glueContext.create_dynamic_frame.from_options(connection_type= 's3',connection_options={"paths": [s3_path6]}, format = 'json')
 
-data.toDF().show(1000)
 
-merged_data = data.union(data).union(data2).union(data3).union(data4).union(data5).union(data6)
+df_bi = df.withColumn("bilheteria", when(col("bilheteria") == "N/A", None).otherwise(col("bilheteria")))
 
-from pyspark.sql.functions import lit, to_date
-data_date = merged_data.withColumn("data_de_criacao", to_date(lit("2023-08-13"), "yyyy-MM-dd"))
+df_bi = df_bi.withColumn("bilheteria", regexp_replace(col("bilheteria"), "[\$,]", "").cast("double"))
 
-from awsglue.dynamicframe import DynamicFrame
+df_bi = df_bi.withColumn("Awards", when(col("Awards") == "N/A", None).otherwise(col("Awards")))
 
+df_bi = df_bi.withColumn("Avaliacao do imdb", when(col("Avaliacao do imdb") == "N/A", None).otherwise(col("Avaliacao do imdb")))
+df2 = df_bi.withColumn("Avaliacao do imdb", df_bi["Avaliacao do imdb"].cast("double"))
+df2 = df2.withColumn("imdbVotes", when(col("imdbVotes") == "N/A", None).otherwise(col("imdbVotes")))
+df2 = df2.withColumn("Metascore", when(col("Metascore") == "N/A", None).otherwise(col("Metascore")))
+
+df2 = df2.withColumn("imdbVotes", df2["imdbVotes"].cast("double"))
+df2 = df2.withColumn("Metascore", df2["Metascore"].cast("int"))
+df_dt = df2.withColumn("data_de_criacao", to_date(lit("2023-08-13"), "yyyy-MM-dd"))
+
+
+
+
+df = DynamicFrame.fromDF(df_dt, glueContext)
 
 glueContext.write_dynamic_frame.from_options(
-    frame=data_date,
+    frame=df,
     connection_type="s3",
     connection_options={
         "path": "s3://data-lake-paganipb/Trusted/terror|misterio/2023/08/13",

@@ -19,11 +19,13 @@ tabelaFiltrada = Join.apply(frame1=tabela3, frame2=table2, keys1=["id"], keys2=[
 tabela_final = Join.apply(frame1=table1, frame2=tabelaFiltrada, keys1=["id"], keys2=["id"])
 
 df_final = tabela_final.toDF()
+
+df_final_sem_duplicatas = df_final.dropDuplicates(["id"])
+
 df = df_final_sem_duplicatas.select("imdb_id","titulo","imdbVotes", "vote_average","popularity","Metascore",
                                     "avaliacao_do_imdb","vote_count", "numeroVotos","genero","nomeArtista",
                                     "anoLancamento","revenue","Awards","bilheteria","budget")
 
-df_final_sem_duplicatas = df_final.dropDuplicates(["id"])
 df = DynamicFrame.fromDF(df, glueContext)
 
 glueContext.write_dynamic_frame.from_options(
